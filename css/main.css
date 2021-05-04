@@ -37,6 +37,40 @@ h3 {
   -webkit-box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
 }
+.wrapper-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 0;
+  gap: 40px;
+  position: relative;
+  padding-left: 40px;
+  left: -20px;
+}
+.wrapper-section-bg {
+  background-color: #0085ff;
+}
+.wrapper-section-nonBG {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
 #nav-bar {
   background-color: #0085ff;
@@ -147,13 +181,25 @@ h3 {
   color: #fb442d;
 }
 
+.section-nonBG {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 0;
+}
 .section-bg {
   background-color: #0085ff;
 }
 .section-title {
   -webkit-filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.5));
           filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.5));
-  width: 400px;
+  width: 600px;
 }
 .section-title-bg {
   display: -webkit-box;
@@ -170,10 +216,34 @@ h3 {
           clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
 }
 .section-title-bg h1 {
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
+.skill-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .skill-icon img {
   height: 150px;
   width: 150px;
+}
+
+#grid-skills {
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-template-columns: repeat(6, 1fr);
+  width: 960px;
 }

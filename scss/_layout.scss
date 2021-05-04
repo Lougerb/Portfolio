@@ -6,6 +6,21 @@
     margin: auto 20px;
     box-shadow: $objectShadow;
   }
+  &-section {
+    @include centerFlex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 40px;
+    position: relative;
+    padding-left: 40px;
+    left: -20px;
+    &-bg {
+      background-color: $primaryColor;
+    }
+    &-nonBG {
+      @include centerFlex;
+    }
+  }
 }
 #nav {
   &-bar {
@@ -42,6 +57,7 @@
     top: 0;
     height: 20vh;
     width: 100%;
+
     &-tail {
       background-color: darken($color: $primaryColor, $amount: 20);
       height: 20px;
@@ -84,27 +100,48 @@
   }
 }
 .section {
+  &-nonBG {
+    @include centerFlex;
+    // width: 100%;
+    padding: 40px 0;
+    // background-color: red;
+  }
   &-bg {
     background-color: $primaryColor;
   }
   &-title {
     filter: drop-shadow($objectShadow);
-    width: 400px;
+    width: 600px;
+
     &-bg {
       @include centerFlex;
       background-color: $secondaryColor;
       clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
       h1 {
-        margin: 10px 0;
+        margin: 5px 0;
       }
     }
   }
 }
 .skill {
   &-icon {
+    @include centerFlex;
+    flex-direction: column;
     img {
       height: 150px;
       width: 150px;
     }
   }
 }
+#grid {
+  &-skills {
+    @include centerGrid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 960px;
+  }
+}
+// #section {
+//   &-skills {
+//     position: relative;
+//   }
+// }
