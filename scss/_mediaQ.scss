@@ -1,0 +1,80 @@
+@media (max-width: 980px) {
+  #grid {
+    &-skills {
+      //   justify-items: center;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+@media (max-width: 768px) {
+  #grid {
+    &-skills {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &-projects {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+    }
+  }
+  .about {
+    &-intro {
+      grid-template-columns: auto;
+    }
+    &-education {
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width: 480px) {
+  #nav {
+    // &-showbtn {
+    //   display: block;
+    //   :focus {
+    //     #nav-bar {
+    //       right: 0;
+    //       //   transition: 0.5ms;
+    //     }
+    //   }
+    // }
+    &-opt {
+      width: 90%;
+      right: 0;
+    }
+    &-bar {
+      position: fixed;
+      width: 100%;
+      right: 0;
+      //   top: 0;
+      bottom: 15vh;
+      z-index: 100;
+      ul {
+        // width: 100%;
+        gap: 10px;
+        li {
+          a {
+            font-size: 0.7em;
+          }
+        }
+      }
+    }
+  }
+
+  .section {
+    &-title {
+      &-bg {
+        h1 {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 395px) {
+  .contact {
+    &-email {
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
