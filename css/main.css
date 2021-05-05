@@ -13,7 +13,7 @@ li {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -51,7 +51,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 20px 0;
+  padding: 40px 0;
   gap: 40px;
   position: relative;
   padding-left: 40px;
@@ -70,6 +70,12 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+  padding: 40px 0;
 }
 
 #nav-bar {
@@ -105,7 +111,6 @@ h3 {
           align-items: center;
   height: 50px;
   font-size: 24;
-  color: white;
 }
 #nav-bar li:hover {
   background-color: #fb442d;
@@ -121,14 +126,25 @@ h3 {
   width: 100%;
 }
 .theme-polygon-tail {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
   background-color: #005099;
   height: 20px;
   width: 20px;
+  position: absolute;
+  z-index: -1;
+  bottom: -10px;
+}
+.theme-polygon-tailSection {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+  background-color: #005099;
+  height: 20px;
+  width: 20px;
   position: absolute;
-  bottom: -10px;
   z-index: -1;
+  bottom: -10px;
+  left: -20px;
 }
 .theme-polygon-header {
   background-image: linear-gradient(45deg, #0085ff, #004382);
@@ -191,15 +207,16 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px 0;
 }
 .section-bg {
   background-color: #0085ff;
+  -webkit-box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 .section-title {
   -webkit-filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.5));
           filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.5));
-  width: 600px;
 }
 .section-title-bg {
   display: -webkit-box;
@@ -212,11 +229,14 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fb442d;
-  -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
-          clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+  text-align: center;
 }
 .section-title-bg h1 {
-  margin: 5px 0;
+  margin: 5px 20px;
+  -webkit-transform: skew(20deg);
+          transform: skew(20deg);
 }
 
 .skill-icon {
@@ -241,9 +261,172 @@ h3 {
 
 #grid-skills {
   display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  width: 960px;
+}
+#grid-projects {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  width: 960px;
+}
+
+.project-preview {
+  background-color: transparent;
+  height: 350px;
+  width: 250px;
+  background-size: cover;
+  position: relative;
+}
+.project-preview img {
+  position: absolute;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.project-hover {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  grid-template-columns: repeat(6, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.project-hover:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.project-hover:hover a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 1;
+}
+.project-hover a {
+  z-index: 1;
+  background-color: #fb442d;
+  padding: 5px;
+  opacity: 0;
+}
+.project-holder {
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  -webkit-filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.5));
+}
+.project-holder-polygon-R {
+  -webkit-clip-path: polygon(0 50%, calc(100% + 1px) 0, calc(100% + 1px) calc(100% + 1px), 0 100%);
+          clip-path: polygon(0 50%, calc(100% + 1px) 0, calc(100% + 1px) calc(100% + 1px), 0 100%);
+  position: absolute;
+  background-color: #005099;
+  height: 100px;
+  width: inherit;
+  bottom: 0;
+  z-index: 1;
+}
+.project-holder-polygon-L {
+  -webkit-clip-path: polygon(0 0, calc(100% + 1px) 50%, calc(100% + 1px) calc(100% + 1px), 0 100%);
+          clip-path: polygon(0 0, calc(100% + 1px) 50%, calc(100% + 1px) calc(100% + 1px), 0 100%);
+  position: absolute;
+  background-color: #0085ff;
+  height: 100px;
+  width: inherit;
+  bottom: 0;
+  z-index: 1;
+}
+.project-holder-title {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.about-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 960px;
+  gap: 20px;
+}
+.about-pic {
+  background-color: red;
+  height: 300px;
+  width: 300px;
+}
+.about-intro {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+.about-intro-p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.about-education {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: inherit;
+}
+.about-education-title h3 {
+  font-weight: bold;
+}
+.about-education-wrapper {
+  width: 450px;
+}
+.about-education-paragraph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  margin: 5px 0;
+}
+.about-education-paragraph ul {
+  -webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+  line-height: 30px;
+}
+.about-education-paragraph ul li {
+  list-style-type: disc;
 }
