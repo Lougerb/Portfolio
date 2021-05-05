@@ -126,14 +126,26 @@ h3 {
   width: 100%;
 }
 .theme-polygon-tail {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
   background-color: #005099;
   height: 20px;
   width: 20px;
   position: absolute;
   z-index: -1;
   bottom: -10px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+}
+.theme-polygon-tail-footer {
+  background-color: #005099;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  z-index: -1;
+  bottom: -10px;
+  -webkit-clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+  top: 20px;
+  right: 0;
 }
 .theme-polygon-tailSection {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
@@ -152,6 +164,24 @@ h3 {
   width: inherit;
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
           clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+.theme-polygon-footer {
+  background-image: linear-gradient(225deg, #0085ff, #004382);
+  height: inherit;
+  width: inherit;
+  -webkit-clip-path: polygon(100% 5%, 0% 100%, 100% 100%);
+          clip-path: polygon(100% 5%, 0% 100%, 100% 100%);
+  position: absolute;
+  bottom: -20px;
+}
+.theme-polygon-footer-wrapper {
+  -webkit-filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.5));
+  position: absolute;
+  height: 20vh;
+  width: 100%;
+  right: -20px;
+  bottom: 0;
 }
 
 #header-content {
@@ -195,6 +225,10 @@ h3 {
 #header-quote h3 {
   font-style: italic;
   color: #fb442d;
+}
+
+#section-contact {
+  position: relative;
 }
 
 .section-nonBG {
@@ -377,19 +411,23 @@ h3 {
   display: grid;
   justify-items: center;
   grid-template-columns: auto auto;
-  gap: 20px;
+  gap: 50px;
+}
+.about-intro img {
+  width: 200px;
 }
 .about-intro-p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 40px;
 }
 .about-education {
   display: -webkit-box;
@@ -429,4 +467,52 @@ h3 {
 }
 .about-education-paragraph ul li {
   list-style-type: disc;
+}
+
+.contact-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  text-align: center;
+  position: relative;
+}
+.contact-p h2 {
+  font-weight: lighter;
+  font-style: italic;
+}
+.contact-email h2 {
+  font-size: 2em;
+}
+.contact-resume {
+  background-color: #fb442d;
+  border: 5px solid #0085ff;
+  font-size: 2em;
+  padding: 5px 10px;
+}
+.contact-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.contact-social img {
+  height: auto;
+  width: 100px;
 }

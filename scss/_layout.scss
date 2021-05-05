@@ -63,8 +63,16 @@
 
     &-tail {
       @include themeTail;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+      &-footer {
+        @include themeTail;
+        clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+        top: 20px;
+        right: 0;
+      }
 
       &Section {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
         @include themeTail;
         left: -20px;
       }
@@ -75,6 +83,25 @@
       height: inherit;
       width: inherit;
       clip-path: polygon(0 0, 0 100%, 100% 0);
+    }
+
+    &-footer {
+      background-image: linear-gradient(225deg, $primaryColor, #004382);
+      height: inherit;
+      width: inherit;
+      clip-path: polygon(100% 5%, 0% 100%, 100% 100%);
+      position: absolute;
+      bottom: -20px;
+      // right: -20px;
+
+      &-wrapper {
+        filter: drop-shadow($objectShadow);
+        position: absolute;
+        height: 20vh;
+        width: 100%;
+        right: -20px;
+        bottom: 0;
+      }
     }
   }
 }
@@ -100,6 +127,11 @@
       font-style: italic;
       color: $secondaryColor;
     }
+  }
+}
+#section {
+  &-contact {
+    position: relative;
   }
 }
 .section {
@@ -145,8 +177,6 @@
   }
   &-projects {
     @include centerGrid;
-    // align-items: center;
-    // margin-top: 20px;
     grid-template-columns: repeat(3, 1fr);
     position: relative;
     width: 960px;
@@ -193,27 +223,8 @@
     position: absolute;
     bottom: 0;
     width: inherit;
-    // opacity: 0.5;
     filter: drop-shadow($objectShadow);
 
-    // &-polygon-R {
-    //   border-right: 250px solid darken($color: $primaryColor, $amount: 20);
-    //   border-top: 3em solid transparent;
-    //   border-bottom: 2em solid darken($color: $primaryColor, $amount: 20);
-    //   height: 0;
-    //   position: absolute;
-    //   bottom: 0;
-    //   z-index: -1;
-    // }
-    // &-polygon-L {
-    //   border-left: 250px solid $primaryColor;
-    //   border-top: 3em solid transparent;
-    //   border-bottom: 2em solid $primaryColor;
-    //   height: 0;
-    //   position: absolute;
-    //   bottom: 0;
-    //   z-index: -1;
-    // }
     &-polygon {
       &-R {
         clip-path: polygon(
@@ -271,12 +282,15 @@
   &-intro {
     @include centerGrid;
     grid-template-columns: auto auto;
-    gap: 20px;
-
+    gap: 50px;
+    img {
+      width: 200px;
+    }
     &-p {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: center;
       flex-direction: column;
+      gap: 40px;
     }
   }
   &-education {
@@ -304,6 +318,44 @@
           list-style-type: disc;
         }
       }
+    }
+  }
+}
+.contact {
+  &-wrapper {
+    @include centerFlex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    position: relative;
+  }
+  &-p {
+    h2 {
+      font-weight: lighter;
+      font-style: italic;
+    }
+  }
+  &-email {
+    h2 {
+      font-size: 2em;
+    }
+  }
+  &-resume {
+    // a {
+    // background-color: $primaryColor;
+    // border: 5px solid $secondaryColor;
+    background-color: $secondaryColor;
+    border: 5px solid $primaryColor;
+    font-size: 2em;
+    padding: 5px 10px;
+    // }
+  }
+  &-social {
+    @include centerFlex;
+    gap: 20px;
+    img {
+      height: auto;
+      width: 100px;
     }
   }
 }
