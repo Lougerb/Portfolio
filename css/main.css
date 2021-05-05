@@ -99,6 +99,7 @@ h3 {
 }
 #nav-bar {
   position: relative;
+  height: 100%;
 }
 #nav-bar ul {
   display: -webkit-box;
@@ -126,6 +127,12 @@ h3 {
 }
 #nav-bar li:hover {
   background-color: #fb442d;
+}
+
+.mobileNav {
+  -webkit-transition: 2ms;
+  transition: 2ms;
+  bottom: 20px;
 }
 
 .theme-polygon {
@@ -576,7 +583,6 @@ h3 {
     position: fixed;
     width: 100%;
     right: 0;
-    bottom: 15vh;
     z-index: 100;
   }
   #nav-bar ul {

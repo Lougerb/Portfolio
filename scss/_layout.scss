@@ -46,7 +46,9 @@
     z-index: 100;
   }
   &-bar {
+    // background-color: red;
     position: relative;
+    height: 100%;
 
     ul {
       display: flex;
@@ -64,6 +66,12 @@
       }
     }
   }
+}
+.mobileNav {
+  // position: fixed;
+  // transform: translateY(15vh);
+  transition: 2ms;
+  bottom: 20px;
 }
 .theme {
   &-polygon {
