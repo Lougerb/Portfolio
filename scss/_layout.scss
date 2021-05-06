@@ -27,28 +27,42 @@
   }
 }
 #nav {
-  &-showbtn {
+  &-hamburger {
     position: absolute;
-    background-color: red;
-    height: 40px;
-    width: 30px;
-    left: -30px;
-    top: 25%;
-    display: none;
+    background-color: darken($color: $primaryColor, $amount: 10);
+    box-shadow: $objectShadow;
+    height: 50px;
+    @include centerFlex;
+    right: 0;
+    cursor: pointer;
+    &-patty {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 5px;
+      // z-index: 100;
+    }
   }
   &-opt {
-    position: absolute;
-    background-color: $primaryColor;
+    background-color: darken($color: $primaryColor, $amount: 5);
     box-shadow: $objectShadow;
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
-    right: -20px;
-    width: 50%;
+
+    // right: -20px;
+    width: 600px;
     z-index: 100;
   }
+  // &-list {
+
+  // }
   &-bar {
-    // background-color: red;
+    // @include centerFlex;
+
     position: relative;
-    height: 100%;
+    // background-color: red;
 
     ul {
       display: flex;
@@ -67,12 +81,77 @@
     }
   }
 }
-.mobileNav {
-  // position: fixed;
-  // transform: translateY(15vh);
-  transition: 2ms;
-  bottom: 20px;
+.nav {
+  &-patty {
+    background-color: white;
+    height: 5px;
+    width: 30px;
+  }
+  &-mobile {
+    position: fixed;
+    right: 0;
+  }
+  &-list {
+    &-mobile {
+      width: 0px;
+      // margin-right: 300px;
+      right: 0;
+      position: absolute;
+      transition: width 0.2s;
+      margin-top: 30px;
+      // 100 viewport - 50px height of hamburger
+      height: calc(100vh - 50px);
+      flex-direction: column;
+      background-color: rgb($darkenPrimary, 0.8);
+
+      li {
+        @include centerFlex;
+        overflow: hidden;
+        height: inherit;
+        &:hover {
+          box-shadow: $objectShadow;
+        }
+        a {
+          padding: 100% 0;
+          width: 100%;
+        }
+      }
+    }
+    &-show {
+      // left: 300px;
+      // margin-left: 300px;
+      right: 0;
+      width: 300px;
+      // li {
+      //   a {
+      //     visibility: visible;
+      //   }
+      // }
+    }
+  }
+  &-desktop {
+    position: absolute;
+    right: -20px;
+  }
+  &-burger {
+    // &-mobile {
+    // }
+
+    &-desktop {
+      margin-top: -20px;
+      width: 50px;
+      transition: width 0.2s;
+    }
+    &-hide {
+      visibility: hidden;
+    }
+  }
+  &-expandBurger {
+    width: 300px;
+    transition: width 0.2s;
+  }
 }
+
 .theme {
   &-polygon {
     filter: drop-shadow($objectShadow);
@@ -100,7 +179,7 @@
     }
 
     &-header {
-      background-image: linear-gradient(45deg, $primaryColor, #004382);
+      background-image: linear-gradient(45deg, $primaryColor, $darkenPrimary);
       height: inherit;
       width: inherit;
       clip-path: polygon(0 0, 0 100%, 100% 0);
@@ -193,7 +272,7 @@
     flex-direction: column;
     img {
       height: 150px;
-      width: 150px;
+      width: auto;
     }
   }
 }
@@ -300,6 +379,9 @@
     flex-direction: column;
     width: 960px;
     gap: 20px;
+    // p {
+    //   text-shadow: $objectShadow;
+    // }
   }
 
   &-pic {
@@ -329,6 +411,8 @@
     &-title {
       h3 {
         font-weight: bold;
+        text-shadow: 2px 2px black;
+        // text-shadow: $objectShadow;
       }
     }
     &-wrapper {

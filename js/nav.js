@@ -1,5 +1,8 @@
 "use strict";
-const navBar = document.getElementById("nav-opt");
+const navBar = document.getElementById("nav-opt"),
+  navBurger = document.getElementById("nav-hamburger"),
+  navList = document.getElementById("nav-list"),
+  headerPolygon = document.getElementById("header-polygon");
 const headerSec = document.getElementById("header-portfolio"),
   skillSec = document.getElementById("section-skills"),
   projectSec = document.getElementById("section-project"),
@@ -7,18 +10,31 @@ const headerSec = document.getElementById("header-portfolio"),
   contactSec = document.getElementById("section-contact");
 const secArray = [skillSec, projectSec, aboutSec, contactSec];
 
+const toggleNavDisplay = function (addClass, removeClass) {
+  navBar.classList.remove(`${removeClass}`);
+  navBar.classList.add(`${addClass}`);
+};
 const options = {
   root: null,
-  threshold: 0.8,
-  rootMargin: "0px",
+  threshold: 0.0,
+  rootMargin: "20px 20px 0px 20px",
 };
 const beTouching = function (elemID) {
   elemID.forEach((entry) => {
     if (entry.isIntersecting) {
       console.log("This is header");
-      navBar.classList.remove("mobileNav");
+      toggleNavDisplay("nav-desktop", "nav-mobile");
+
+      navBurger.classList.remove("nav-expandBurger");
+      navList.classList.remove("nav-list-show");
+
+      navList.classList.remove("nav-list-mobile");
+      navBurger.classList.add("nav-burger-hide");
     } else {
-      navBar.classList.add("mobileNav");
+      toggleNavDisplay("nav-mobile", "nav-desktop");
+
+      navList.classList.add("nav-list-mobile");
+      navBurger.classList.remove("nav-burger-hide");
       console.log("This is not header");
     }
   });
@@ -26,7 +42,15 @@ const beTouching = function (elemID) {
 
 const observeNav = new IntersectionObserver(beTouching, options);
 
-// secArray.forEach((arrEntries) => {
-//   observeNav.observe(arrEntries);
-// });
-observeNav.observe(headerSec);
+observeNav.observe(headerPolygon);
+
+//Nav burger click
+navBurger.addEventListener("click", function () {
+  navBurger.classList.toggle("nav-expandBurger");
+  navList.classList.toggle("nav-list-show");
+});
+
+navList.addEventListener("click", function () {
+  navBurger.classList.remove("nav-expandBurger");
+  navList.classList.remove("nav-list-show");
+});

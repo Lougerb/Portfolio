@@ -16,6 +16,8 @@
       row-gap: 20px;
     }
   }
+
+  @include sectionTitle;
   .about {
     &-intro {
       grid-template-columns: auto;
@@ -24,47 +26,65 @@
       flex-direction: column;
     }
   }
+  @include navMobile;
 }
 @media (max-width: 480px) {
-  #nav {
-    // &-showbtn {
-    //   display: block;
-    //   :focus {
-    //     #nav-bar {
-    //       right: 0;
-    //       //   transition: 0.5ms;
-    //     }
-    //   }
-    // }
-    &-opt {
-      width: 90%;
-      right: 0;
-    }
-    &-bar {
-      position: fixed;
-      width: 100%;
-      right: 0;
-      //   top: 0;
-      //   bottom: 15vh;
-      z-index: 100;
-      ul {
-        // width: 100%;
-        gap: 10px;
-        li {
-          a {
-            font-size: 0.7em;
-          }
-        }
-      }
+  h3 {
+    font-size: 1.1em;
+  }
+  #nav-opt {
+    a {
+      font-size: 0.9em;
     }
   }
 
-  .section {
-    &-title {
-      &-bg {
-        h1 {
-          font-size: 1.5em;
-        }
+  #grid {
+    &-skills {
+      row-gap: 10px;
+    }
+  }
+  .about {
+    &-wrapper {
+      p {
+        @include mobileParagraph;
+      }
+      li {
+        @include mobileParagraph;
+      }
+    }
+    &-intro {
+      gap: 20px;
+      img {
+        width: 100px;
+      }
+      &-p {
+        gap: 20px;
+      }
+    }
+    // &-education {
+    //   &-title {
+    //     h3 {
+    //       text-shadow: $objectShadow;
+    //     }
+    //   }
+    // }
+  }
+  .skill {
+    &-icon {
+      img {
+        height: 100px;
+        width: auto;
+      }
+    }
+  }
+  .contact {
+    &-resume {
+      font-size: 1.5em;
+    }
+    &-social {
+      img {
+        height: auto;
+        width: 50px;
       }
     }
   }

@@ -78,28 +78,55 @@ h3 {
   padding: 40px 0;
 }
 
-#nav-showbtn {
+#nav-hamburger {
   position: absolute;
-  background-color: red;
-  height: 40px;
-  width: 30px;
-  left: -30px;
-  top: 25%;
-  display: none;
-}
-#nav-opt {
-  position: absolute;
-  background-color: #0085ff;
+  background-color: #006acc;
   -webkit-box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 0;
+  cursor: pointer;
+}
+#nav-hamburger-patty {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+#nav-opt {
+  background-color: #0078e6;
+  -webkit-box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 20px;
-  right: -20px;
-  width: 50%;
+  width: 600px;
   z-index: 100;
 }
 #nav-bar {
   position: relative;
-  height: 100%;
 }
 #nav-bar ul {
   display: -webkit-box;
@@ -129,10 +156,71 @@ h3 {
   background-color: #fb442d;
 }
 
-.mobileNav {
-  -webkit-transition: 2ms;
-  transition: 2ms;
-  bottom: 20px;
+.nav-patty {
+  background-color: white;
+  height: 5px;
+  width: 30px;
+}
+.nav-mobile {
+  position: fixed;
+  right: 0;
+}
+.nav-list-mobile {
+  width: 0px;
+  right: 0;
+  position: absolute;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+  margin-top: 30px;
+  height: calc(100vh - 50px);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 67, 130, 0.8);
+}
+.nav-list-mobile li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  height: inherit;
+}
+.nav-list-mobile li:hover {
+  -webkit-box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
+}
+.nav-list-mobile li a {
+  padding: 100% 0;
+  width: 100%;
+}
+.nav-list-show {
+  right: 0;
+  width: 300px;
+}
+.nav-desktop {
+  position: absolute;
+  right: -20px;
+}
+.nav-burger-desktop {
+  margin-top: -20px;
+  width: 50px;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+.nav-burger-hide {
+  visibility: hidden;
+}
+.nav-expandBurger {
+  width: 300px;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
 }
 
 .theme-polygon {
@@ -321,7 +409,7 @@ h3 {
 }
 .skill-icon img {
   height: 150px;
-  width: 150px;
+  width: auto;
 }
 
 #grid-skills {
@@ -475,6 +563,7 @@ h3 {
 }
 .about-education-title h3 {
   font-weight: bold;
+  text-shadow: 2px 2px black;
 }
 .about-education-wrapper {
   width: 450px;
@@ -564,6 +653,10 @@ h3 {
     row-gap: 20px;
   }
 
+  .section-title-bg h1 {
+    font-size: 1.5em;
+  }
+
   .about-intro {
     grid-template-columns: auto;
   }
@@ -573,14 +666,13 @@ h3 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-}
-@media (max-width: 480px) {
+
   #nav-opt {
     width: 90%;
     right: 0;
   }
   #nav-bar {
-    position: fixed;
+    position: absolute;
     width: 100%;
     right: 0;
     z-index: 100;
@@ -588,12 +680,47 @@ h3 {
   #nav-bar ul {
     gap: 10px;
   }
-  #nav-bar ul li a {
-    font-size: 0.7em;
+}
+@media (max-width: 480px) {
+  h3 {
+    font-size: 1.1em;
   }
 
-  .section-title-bg h1 {
+  #nav-opt a {
+    font-size: 0.9em;
+  }
+
+  #grid-skills {
+    row-gap: 10px;
+  }
+
+  .about-wrapper p {
+    font-size: 0.9em;
+  }
+  .about-wrapper li {
+    font-size: 0.9em;
+  }
+  .about-intro {
+    gap: 20px;
+  }
+  .about-intro img {
+    width: 100px;
+  }
+  .about-intro-p {
+    gap: 20px;
+  }
+
+  .skill-icon img {
+    height: 100px;
+    width: auto;
+  }
+
+  .contact-resume {
     font-size: 1.5em;
+  }
+  .contact-social img {
+    height: auto;
+    width: 50px;
   }
 }
 @media (max-width: 395px) {
