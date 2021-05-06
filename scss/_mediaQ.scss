@@ -1,7 +1,6 @@
 @media (max-width: 980px) {
   #grid {
     &-skills {
-      //   justify-items: center;
       grid-template-columns: repeat(4, 1fr);
     }
   }
@@ -61,13 +60,6 @@
         gap: 20px;
       }
     }
-    // &-education {
-    //   &-title {
-    //     h3 {
-    //       text-shadow: $objectShadow;
-    //     }
-    //   }
-    // }
   }
   .skill {
     &-icon {

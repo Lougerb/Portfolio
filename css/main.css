@@ -95,6 +95,8 @@ h3 {
           align-items: center;
   right: 0;
   cursor: pointer;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
 }
 #nav-hamburger-patty {
   position: relative;
@@ -111,7 +113,7 @@ h3 {
   gap: 5px;
 }
 #nav-opt {
-  background-color: #0078e6;
+  background-color: #006acc;
   -webkit-box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
   display: -webkit-box;
@@ -200,10 +202,14 @@ h3 {
   padding: 100% 0;
   width: 100%;
   font-size: 1.5em;
+  opacity: 0;
 }
 .nav-list-show {
   right: 0;
   width: 300px;
+}
+.nav-list-show li a {
+  opacity: 1;
 }
 .nav-desktop {
   position: absolute;
@@ -215,13 +221,12 @@ h3 {
   opacity: 1;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
 }
 .nav-burger-hide {
   opacity: 0;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  visibility: hidden;
 }
 .nav-expandBurger {
   width: 300px;
@@ -265,11 +270,11 @@ h3 {
   height: 20px;
   width: 20px;
   position: absolute;
-  z-index: -1;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
+  z-index: -100;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+          clip-path: polygon(0 0, 0 100%, 100% 0);
   right: 0;
-  bottom: -10px;
+  bottom: -20px;
 }
 .theme-polygon-tailSection {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);

@@ -14,6 +14,20 @@ const toggleNavDisplay = function (addClass, removeClass) {
   navBar.classList.remove(`${removeClass}`);
   navBar.classList.add(`${addClass}`);
 };
+const toggleMobileNavDisplay = function (
+  elementAdd,
+  addMClass,
+  elementRemove,
+  removeMClass
+) {
+  elementAdd.classList.add(addMClass);
+  // if (elementRemove.classList.contains(`${removeMClass}`)) {
+  elementRemove.classList.remove(removeMClass);
+  // } else {
+  //   return null;
+  // }
+};
+
 const options = {
   root: null,
   threshold: 0.0,
@@ -28,13 +42,22 @@ const beTouching = function (elemID) {
       navBurger.classList.remove("nav-expandBurger");
       navList.classList.remove("nav-list-show");
 
-      navList.classList.remove("nav-list-mobile");
-      navBurger.classList.add("nav-burger-hide");
+      toggleMobileNavDisplay(
+        navBurger,
+        "nav-burger-hide",
+        navList,
+        "nav-list-mobile"
+      );
     } else {
       toggleNavDisplay("nav-mobile", "nav-desktop");
 
-      navList.classList.add("nav-list-mobile");
-      navBurger.classList.remove("nav-burger-hide");
+      toggleMobileNavDisplay(
+        navList,
+        "nav-list-mobile",
+        navBurger,
+        "nav-burger-hide"
+      );
+
       console.log("This is not header");
     }
   });
@@ -53,4 +76,13 @@ navBurger.addEventListener("click", function () {
 navList.addEventListener("click", function () {
   navBurger.classList.remove("nav-expandBurger");
   navList.classList.remove("nav-list-show");
+});
+
+document.addEventListener("click", function (e) {
+  if (navBar.contains(e.target)) {
+    return null;
+  } else {
+    navBurger.classList.remove("nav-expandBurger");
+    navList.classList.remove("nav-list-show");
+  }
 });
