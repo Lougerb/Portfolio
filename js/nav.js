@@ -21,11 +21,7 @@ const toggleMobileNavDisplay = function (
   removeMClass
 ) {
   elementAdd.classList.add(addMClass);
-  // if (elementRemove.classList.contains(`${removeMClass}`)) {
   elementRemove.classList.remove(removeMClass);
-  // } else {
-  //   return null;
-  // }
 };
 
 const options = {
@@ -36,7 +32,6 @@ const options = {
 const beTouching = function (elemID) {
   elemID.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log("This is header");
       toggleNavDisplay("nav-desktop", "nav-mobile");
 
       navBurger.classList.remove("nav-expandBurger");
@@ -57,8 +52,6 @@ const beTouching = function (elemID) {
         navBurger,
         "nav-burger-hide"
       );
-
-      console.log("This is not header");
     }
   });
 };
