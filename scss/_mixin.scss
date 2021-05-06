@@ -44,6 +44,23 @@
       }
     }
   }
+  .nav {
+    &-list {
+      &-mobile {
+        li {
+          font-size: 1.5em;
+          // a {
+          // }
+        }
+      }
+      &-show {
+        width: 200px;
+      }
+    }
+    &-expandBurger {
+      width: 200px;
+    }
+  }
 }
 
 @mixin mobileParagraph {

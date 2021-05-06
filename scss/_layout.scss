@@ -114,6 +114,7 @@
         a {
           padding: 100% 0;
           width: 100%;
+          font-size: 1.5em;
         }
       }
     }
@@ -140,10 +141,13 @@
     &-desktop {
       margin-top: -20px;
       width: 50px;
+      opacity: 1;
       transition: width 0.2s;
+      transition: opacity 0.2s;
     }
     &-hide {
-      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.2s;
     }
   }
   &-expandBurger {
@@ -169,6 +173,16 @@
         clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
         top: -5px;
         right: 0;
+      }
+      &-hamburger {
+        background-color: darken($color: $primaryColor, $amount: 20);
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        z-index: -1;
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
+        right: 0;
+        bottom: -10px;
       }
 
       &Section {
