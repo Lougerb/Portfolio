@@ -101,6 +101,12 @@ h3 {
   cursor: pointer;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 #nav-hamburger-patty {
   position: relative;
@@ -222,14 +228,11 @@ h3 {
 .nav-burger-desktop {
   margin-top: -20px;
   width: 50px;
-  opacity: 1;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
-  -webkit-transition: opacity 0.1s;
-  transition: opacity 0.1s;
+  visibility: visible;
 }
 .nav-burger-hide {
-  opacity: 0;
   visibility: hidden;
 }
 .nav-expandBurger {

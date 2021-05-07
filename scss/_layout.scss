@@ -36,6 +36,10 @@
     right: 0;
     cursor: pointer;
     transition: width 0.2s;
+    // removes highlight when clicking
+    -webkit-touch-callout: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
     &-patty {
       position: relative;
       display: flex;
@@ -135,14 +139,15 @@
     &-desktop {
       margin-top: -20px;
       width: 50px;
-      opacity: 1;
       transition: width 0.2s;
-      // visibility: visible;
-      transition: opacity 0.1s;
+      visibility: visible;
+
+      // opacity: 1;
+      // transition: opacity 1s;
     }
     &-hide {
-      opacity: 0;
-      // transition: opacity 0.1s;
+      // opacity: 0;
+      // transition: opacity 1s;
       visibility: hidden;
     }
   }
