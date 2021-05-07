@@ -725,6 +725,20 @@ h3 {
     font-size: 1.1em;
   }
 
+  h2 {
+    font-size: 1.2em;
+  }
+
+  #header-content {
+    gap: 50px;
+  }
+  #header-content h1 {
+    font-size: 1.5em;
+  }
+  #header-content h3 {
+    font-size: 1em;
+  }
+
   #nav-opt a {
     font-size: 0.9em;
   }
@@ -756,6 +770,9 @@ h3 {
 
   .contact-resume {
     font-size: 1.5em;
+  }
+  .contact-email {
+    font-size: 0.8em;
   }
   .contact-social img {
     height: auto;
