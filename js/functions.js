@@ -73,3 +73,7 @@ export const closeBurgerOutside = (e) => {
     closeBurgerNav();
   }
 };
+
+export const reloadPage = () => {
+  document.location.hash = "";
+};

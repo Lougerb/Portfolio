@@ -18,3 +18,5 @@ porfolioElem.navBurger.addEventListener("click", navFunc.toggleShowBurger);
 porfolioElem.navList.addEventListener("click", navFunc.closeBurgerNav);
 // When user click outside the borgar, Nav will close
 document.addEventListener("click", navFunc.closeBurgerOutside);
+
+window.onload = navFunc.reloadPage;
