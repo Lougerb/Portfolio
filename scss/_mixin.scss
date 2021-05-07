@@ -1,4 +1,7 @@
 @mixin centerFlex {
+  display: -moz-box;
+  display: -moz-flex;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;

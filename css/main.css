@@ -42,6 +42,7 @@ h3 {
           box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
 }
 .wrapper-section {
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,6 +66,7 @@ h3 {
   background-color: #0085ff;
 }
 .wrapper-section-nonBG {
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,6 +90,7 @@ h3 {
   -webkit-box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
   height: 50px;
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,6 +155,7 @@ h3 {
   width: 100%;
 }
 #nav-bar li a {
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,6 +196,7 @@ h3 {
   background-color: rgba(0, 67, 130, 0.8);
 }
 .nav-list-mobile li {
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,6 +325,7 @@ h3 {
 }
 
 #header-content {
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,6 +346,7 @@ h3 {
   text-align: center;
 }
 #header-name {
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,6 +370,7 @@ h3 {
 }
 
 #section-contact {
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,6 +388,7 @@ h3 {
 }
 
 .section-nonBG {
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -401,6 +410,7 @@ h3 {
           filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.5));
 }
 .section-title-bg {
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,6 +432,7 @@ h3 {
 }
 
 .skill-icon {
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -472,6 +483,7 @@ h3 {
   position: absolute;
   height: inherit;
   width: inherit;
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -534,6 +546,7 @@ h3 {
 }
 
 .about-wrapper {
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -621,6 +634,7 @@ h3 {
 }
 
 .contact-wrapper {
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -652,6 +666,7 @@ h3 {
   padding: 5px 10px;
 }
 .contact-social {
+  display: -moz-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
