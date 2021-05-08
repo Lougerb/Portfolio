@@ -62,7 +62,7 @@ export const beTouching = function (elemID) {
   });
 };
 
-export const toggleShowBurger = () => {
+export const toggleShowFloatNav = () => {
   portfolioElem.navBurger.classList.toggle("nav-expandBurger");
   portfolioElem.navList.classList.toggle("nav-list-show");
   portfolioElem.goToTop.classList.toggle("nav-burger-hide");
@@ -71,6 +71,7 @@ export const toggleShowBurger = () => {
 export const closeBurgerNavList = () => {
   portfolioElem.navBurger.classList.remove("nav-expandBurger");
   portfolioElem.navList.classList.remove("nav-list-show");
+  portfolioElem.goToTop.classList.remove("nav-burger-hide");
 };
 
 export const closeBurgerOutside = (e) => {
@@ -78,7 +79,10 @@ export const closeBurgerOutside = (e) => {
     return null;
   } else {
     closeBurgerNavList();
-    portfolioElem.goToTop.classList.toggle("nav-burger-hide");
+
+    portfolioElem.navList.classList.contains("nav-list-show")
+      ? portfolioElem.goToTop.classList.add("nav-burger-hide")
+      : null;
   }
 };
 

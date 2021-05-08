@@ -13,7 +13,7 @@ const observeNav = new IntersectionObserver(navFunc.beTouching, options);
 observeNav.observe(porfolioElem.headerPolygon);
 
 //When Borgar click, it will show the whole veggies
-porfolioElem.navBurger.addEventListener("click", navFunc.toggleShowBurger);
+porfolioElem.navBurger.addEventListener("click", navFunc.toggleShowFloatNav);
 // When user pick an option from the borgar, nav will close
 porfolioElem.navList.addEventListener("click", navFunc.closeBurgerNavList);
 // When user click outside the borgar, Nav will close
