@@ -167,6 +167,38 @@ h3 {
 #nav-bar li:hover {
   background-color: #fb442d;
 }
+#nav-gototop {
+  background-color: #006acc;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  bottom: -70vh;
+  right: 0;
+  display: -moz-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.5);
+}
+#nav-gototop .theme-polygon-tail-nav {
+  top: -20px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+#nav-gototop-arrow {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 70% 50%, 70% 100%, 30% 100%, 30% 50%, 0 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 70% 50%, 70% 100%, 30% 100%, 30% 50%, 0 50%);
+}
 
 .nav-patty {
   background-color: white;

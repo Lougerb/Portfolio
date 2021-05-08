@@ -1,5 +1,5 @@
 "use strict";
-import * as porfolioElem from "./variables.js";
+import * as portfolioElem from "./variables.js";
 
 //Function to toggle add and remove some certain class from a certain elements
 export const navDisplay = (
@@ -21,35 +21,41 @@ export const navDisplay = (
 export const beTouching = function (elemID) {
   elemID.forEach((entry) => {
     if (entry.isIntersecting) {
+      // To show Main Nav
       navDisplay(
-        porfolioElem.navBar,
+        portfolioElem.navBar,
         "nav-desktop",
-        porfolioElem.navBar,
+        portfolioElem.navBar,
         "nav-mobile"
       );
 
       // To hide Navbutger  and Nav List
       navDisplay(
-        porfolioElem.navBurger,
+        portfolioElem.navBurger,
         "nav-burger-hide",
-        porfolioElem.navList,
+        portfolioElem.navList,
         "nav-list-mobile"
       );
-      navDisplay(null, null, porfolioElem.navBurger, "nav-expandBurger");
-      navDisplay(null, null, porfolioElem.navList, "nav-list-show");
+      navDisplay(null, null, portfolioElem.navBurger, "nav-expandBurger");
+      navDisplay(null, null, portfolioElem.navList, "nav-list-show");
+      // To hide Go to Top button
+      navDisplay(portfolioElem.goToTop, "nav-burger-hide", null, null);
     } else {
       //To show NavBurger
       navDisplay(
-        porfolioElem.navBar,
+        portfolioElem.navBar,
         "nav-mobile",
-        porfolioElem.navBar,
+        portfolioElem.navBar,
         "nav-desktop"
       );
+      // To show Go to top Button
+
+      navDisplay(null, null, portfolioElem.goToTop, "nav-burger-hide");
 
       navDisplay(
-        porfolioElem.navList,
+        portfolioElem.navList,
         "nav-list-mobile",
-        porfolioElem.navBurger,
+        portfolioElem.navBurger,
         "nav-burger-hide"
       );
     }
@@ -57,23 +63,29 @@ export const beTouching = function (elemID) {
 };
 
 export const toggleShowBurger = () => {
-  porfolioElem.navBurger.classList.toggle("nav-expandBurger");
-  porfolioElem.navList.classList.toggle("nav-list-show");
+  portfolioElem.navBurger.classList.toggle("nav-expandBurger");
+  portfolioElem.navList.classList.toggle("nav-list-show");
+  portfolioElem.goToTop.classList.toggle("nav-burger-hide");
 };
 
-export const closeBurgerNav = () => {
-  porfolioElem.navBurger.classList.remove("nav-expandBurger");
-  porfolioElem.navList.classList.remove("nav-list-show");
+export const closeBurgerNavList = () => {
+  portfolioElem.navBurger.classList.remove("nav-expandBurger");
+  portfolioElem.navList.classList.remove("nav-list-show");
 };
 
 export const closeBurgerOutside = (e) => {
-  if (porfolioElem.navBar.contains(e.target)) {
+  if (portfolioElem.navBar.contains(e.target)) {
     return null;
   } else {
-    closeBurgerNav();
+    closeBurgerNavList();
+    portfolioElem.goToTop.classList.toggle("nav-burger-hide");
   }
 };
 
 export const reloadPage = () => {
   document.location.hash = "";
 };
+
+// export const toggleShowGoToTop = () => {
+
+// };

@@ -8,4 +8,5 @@ export const navBar = document.getElementById("nav-opt"),
   projectSec = document.getElementById("section-project"),
   aboutSec = document.getElementById("section-about"),
   contactSec = document.getElementById("section-contact"),
+  goToTop = document.getElementById("nav-gototop"),
   secArray = [skillSec, projectSec, aboutSec, contactSec];

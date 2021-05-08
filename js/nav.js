@@ -15,7 +15,7 @@ observeNav.observe(porfolioElem.headerPolygon);
 //When Borgar click, it will show the whole veggies
 porfolioElem.navBurger.addEventListener("click", navFunc.toggleShowBurger);
 // When user pick an option from the borgar, nav will close
-porfolioElem.navList.addEventListener("click", navFunc.closeBurgerNav);
+porfolioElem.navList.addEventListener("click", navFunc.closeBurgerNavList);
 // When user click outside the borgar, Nav will close
 document.addEventListener("click", navFunc.closeBurgerOutside);
 
