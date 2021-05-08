@@ -17,12 +17,15 @@
   }
 
   @include sectionTitle;
+
   .about {
     &-intro {
       grid-template-columns: auto;
     }
     &-education {
-      flex-direction: column;
+      display: grid;
+      grid-template-rows: auto auto;
+      row-gap: 20px;
     }
   }
   @include navMobile;
@@ -94,10 +97,7 @@
       font-size: 0.8em;
     }
     &-social {
-      img {
-        height: auto;
-        width: 50px;
-      }
+      grid-template-columns: 50px 50px 50px;
     }
   }
 }
