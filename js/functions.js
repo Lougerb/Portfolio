@@ -85,7 +85,3 @@ export const closeBurgerOutside = (e) => {
 export const reloadPage = () => {
   document.location.hash = "";
 };
-
-// export const toggleShowGoToTop = () => {
-
-// };
