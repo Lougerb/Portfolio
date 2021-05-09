@@ -334,6 +334,10 @@
     height: inherit;
     width: inherit;
     @include centerFlex;
+    flex-direction: column;
+    a {
+      margin: 5px 0;
+    }
 
     &:hover {
       background-color: rgb(black, 0.7);
