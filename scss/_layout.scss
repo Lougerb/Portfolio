@@ -458,12 +458,6 @@
     row-gap: 20px;
     text-align: center;
     position: relative;
-    .copyright {
-      h5 {
-        // color: red;
-        font-weight: lighter;
-      }
-    }
   }
   &-p {
     h2 {
@@ -490,5 +484,14 @@
     justify-content: center;
     grid-template-columns: 50px 50px 50px;
     column-gap: 20px;
+  }
+}
+
+.copyright {
+  // position: absolute;
+  text-align: center;
+  bottom: 10px;
+  h5 {
+    font-weight: lighter;
   }
 }
