@@ -458,6 +458,12 @@
     row-gap: 20px;
     text-align: center;
     position: relative;
+    .copyright {
+      h5 {
+        // color: red;
+        font-weight: lighter;
+      }
+    }
   }
   &-p {
     h2 {

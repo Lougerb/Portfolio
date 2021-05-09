@@ -636,6 +636,9 @@ h3 {
   text-align: center;
   position: relative;
 }
+.contact-wrapper .copyright h5 {
+  font-weight: lighter;
+}
 .contact-p h2 {
   font-weight: lighter;
   font-style: italic;
