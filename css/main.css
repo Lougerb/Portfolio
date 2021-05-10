@@ -463,6 +463,14 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.skill-icon:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .skill-icon img {
   height: 150px;
@@ -666,6 +674,14 @@ h3 {
 }
 .contact-resume {
   font-size: 2em;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.contact-resume:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .contact-resume a {
   display: inline-block;
@@ -682,6 +698,16 @@ h3 {
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
+}
+.contact-social img {
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.contact-social img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .copyright {

@@ -295,6 +295,10 @@
   &-icon {
     @include centerFlex;
     flex-direction: column;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.2);
+    }
     img {
       height: 150px;
       width: auto;
@@ -481,6 +485,10 @@
   }
   &-resume {
     font-size: 2em;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.1);
+    }
     a {
       display: inline-block;
       background-color: $secondaryColor;
@@ -493,6 +501,12 @@
     justify-content: center;
     grid-template-columns: 50px 50px 50px;
     column-gap: 20px;
+    img {
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
   }
 }
 
