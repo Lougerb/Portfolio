@@ -484,13 +484,15 @@ h3 {
   width: 960px;
 }
 #grid-projects {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(3, auto);
-  row-gap: 20px;
-  position: relative;
-  width: 960px;
-  padding-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
 }
 
 .project-preview {
@@ -499,6 +501,7 @@ h3 {
   width: 250px;
   background-size: cover;
   position: relative;
+  margin: 10px;
 }
 .project-preview img {
   position: absolute;

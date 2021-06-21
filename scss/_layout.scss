@@ -312,12 +312,17 @@
     width: 960px;
   }
   &-projects {
-    @include centerGrid;
-    grid-template-columns: repeat(3, auto);
-    row-gap: 20px;
-    position: relative;
-    width: 960px;
-    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    //For grid settings
+    // @include centerGrid;
+    // grid-template-columns: repeat(3, auto);
+    // row-gap: 20px;
+    // position: relative;
+    // width: 960px;
+    // padding-bottom: 40px;
   }
 }
 .project {
@@ -327,6 +332,9 @@
     width: 250px;
     background-size: cover;
     position: relative;
+
+    // Added maragin for grid
+    margin: 10px;
     img {
       position: absolute;
       height: 100%;
