@@ -542,18 +542,18 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .project-hover a {
   margin: 5px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .project-hover:hover {
   background-color: rgba(0, 0, 0, 0.7);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 .project-hover:hover a {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   opacity: 1;
 }
 .project-hover a {
