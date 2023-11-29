@@ -472,16 +472,30 @@ h3 {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
-.skill-icon img {
+.skill-icon-img {
+  width: 150px;
   height: 150px;
-  width: auto;
+}
+.skill-icon-img img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 #grid-skills {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(6, 1fr);
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
 }
 #grid-projects {
   display: -webkit-box;
@@ -594,31 +608,18 @@ h3 {
 }
 .about-intro {
   display: grid;
-  justify-items: center;
+  justify-items: start;
   grid-template-columns: 1fr 2fr;
 }
 .about-intro img {
   width: 200px;
 }
 .about-intro-p {
-  display: -moz-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: block;
+  padding-top: 50px;
 }
-.about-intro-p p {
-  margin: auto 0;
-  line-height: 2;
+.about-intro-p h2, .about-intro-p h3 {
+  text-shadow: 2px 2px black;
 }
 .about-education {
   display: -webkit-box;
@@ -722,15 +723,7 @@ h3 {
   font-weight: lighter;
 }
 
-@media (max-width: 980px) {
-  #grid-skills {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 @media (max-width: 768px) {
-  #grid-skills {
-    grid-template-columns: repeat(2, 1fr);
-  }
   #grid-projects {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 20px;
@@ -768,7 +761,7 @@ h3 {
 }
 @media (max-width: 480px) {
   h3 {
-    font-size: 1.1em;
+    font-size: 3vw;
   }
   h2 {
     font-size: 1.2em;
@@ -797,9 +790,9 @@ h3 {
   .about-intro-p p {
     margin: 10px 0;
   }
-  .skill-icon img {
-    height: 100px;
-    width: auto;
+  .skill-icon-img {
+    width: 21.33vw;
+    height: 21.33vw;
   }
   .contact-resume {
     font-size: 1.5em;

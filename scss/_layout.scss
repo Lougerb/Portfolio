@@ -299,17 +299,31 @@
     &:hover {
       transform: scale(1.2);
     }
-    img {
+    &-img {
+      width: 150px;
       height: 150px;
-      width: auto;
+
+      img {
+        width: 100%;
+        // height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        object-position: center;
+      }
     }
   }
 }
 #grid {
   &-skills {
-    @include centerGrid;
-    grid-template-columns: repeat(6, 1fr);
-    width: 960px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    // @include centerGrid;
+    // grid-template-columns: repeat(6, 1fr);
+    // width: 960px;
   }
   &-projects {
     display: flex;
@@ -427,18 +441,18 @@
   }
   &-intro {
     display: grid;
-    justify-items: center;
+    justify-items: start;
     grid-template-columns: 1fr 2fr;
 
     img {
       width: 200px;
     }
     &-p {
-      @include centerFlex;
-      flex-direction: column;
-      p {
-        margin: auto 0;
-        line-height: 2;
+      display: block;
+      padding-top: 50px;
+
+      h2, h3 {
+        text-shadow: 2px 2px black;
       }
     }
   }
