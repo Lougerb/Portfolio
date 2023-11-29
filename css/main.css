@@ -735,11 +735,9 @@ h3 {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 20px;
   }
-
   .section-title-bg h1 {
     font-size: 1.5em;
   }
-
   .about-intro {
     grid-template-columns: auto;
   }
@@ -748,7 +746,6 @@ h3 {
     grid-template-rows: auto auto;
     row-gap: 20px;
   }
-
   #nav-opt {
     width: 90%;
     right: 0;
@@ -759,7 +756,6 @@ h3 {
     right: 0;
     z-index: 100;
   }
-
   .nav-list-mobile li {
     font-size: 1.5em;
   }
@@ -774,26 +770,21 @@ h3 {
   h3 {
     font-size: 1.1em;
   }
-
   h2 {
     font-size: 1.2em;
   }
-
   #header-content h1 {
     font-size: 1.5em;
   }
   #header-content h3 {
     font-size: 1em;
   }
-
   #nav-opt a {
     font-size: 0.9em;
   }
-
   #grid-skills {
     row-gap: 10px;
   }
-
   .about-wrapper p {
     font-size: 0.9em;
   }
@@ -806,12 +797,10 @@ h3 {
   .about-intro-p p {
     margin: 10px 0;
   }
-
   .skill-icon img {
     height: 100px;
     width: auto;
   }
-
   .contact-resume {
     font-size: 1.5em;
   }
@@ -826,4 +815,4 @@ h3 {
   .contact-email h2 {
     font-size: 1.5em;
   }
-}
+}/*# sourceMappingURL=main.css.map */
