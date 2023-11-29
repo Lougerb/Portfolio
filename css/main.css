@@ -475,6 +475,7 @@ h3 {
 .skill-icon-img {
   width: 150px;
   height: 150px;
+  background-color: #fff;
 }
 .skill-icon-img img {
   width: 100%;
